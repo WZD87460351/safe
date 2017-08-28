@@ -20,7 +20,7 @@ var index = {
 					if(i==length){
 						i=0;
 					}
-					$(".bannerBox li").eq(i).stop().fadeIn(500).siblings().stop().fadeOut(500);				
+					$(".bannerBox li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);				
 				}
 
 
@@ -29,7 +29,7 @@ var index = {
 				if(i==-1){
 					i=length-1;
 				}
-				$(".bannerBox li").eq(i).stop().fadeIn(500).siblings().stop().fadeOut(500);				
+				$(".bannerBox li").eq(i).stop().fadeIn(1000).siblings().stop().fadeOut(1000);				
 			}
 
 				$(".Larrow").click(function(){
@@ -41,7 +41,21 @@ var index = {
 				})
 			})
 		})
-	}
+	},
+
+	tabShow:function(num){
+		require(['jquery'],function($){
+			$(document).ready(function(){
+				$(".examTab ul li").first().addClass("on")
+				$(".examTab ul li").click(function(){
+					var index = $(this).index();
+					$(this).addClass("on").siblings().removeClass("on");
+					$(".examList ul li").eq(index).show().siblings().hide()
+				})
+			})
+		})
+	},
+
 }
  
 var user_center = {
@@ -55,5 +69,28 @@ var user_center = {
 	}
 } 
 
+//tool
+var tool = {
+	init:function(){
+		require(['jquery','swiper'],function($,swiper){
+			$(document).ready(function(){
+				var mySwiper = new Swiper(
+					'.swiper-container', {
+					autoplay: 2000,//可选选项，自动滑动
+					nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+				})
+			})
+		})
+	}
+}
+
+
+
+
 exports.index = index;
+
+exports.tool = tool;
+
 exports.user_center = user_center;
+
