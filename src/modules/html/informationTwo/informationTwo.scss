@@ -62,6 +62,7 @@
 			p{
 				margin-top: 20px;
 				line-height: 23px;
+				text-indent: 2em;
 			}
 			.banner{
 				padding: 50px 108px 30px 128px;
@@ -94,6 +95,7 @@
 					height: 90px;
 					width: 100%;
 					box-sizing:border-box;
+					resize:none;
 				}
 			}
 			.submit{
