@@ -56,7 +56,6 @@ var user_center = {
 		require(['jquery'],function($){
 			$(document).ready(function(){
 				
-				
 			})
 		})
 	}

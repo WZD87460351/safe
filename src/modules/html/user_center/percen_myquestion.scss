@@ -49,6 +49,70 @@
 		padding: 0 20px;
 		box-sizing: border-box;
 		border: 1px solid $gray-light;
-		
+		.questionHead{
+				border-bottom: 1px solid $gray-light;
+				line-height: 50px;
+				font-weight: 700;
+				._right{
+					a{
+						font-size: 14px;
+						font-weight: 700;
+						color: black;
+						&:first-child{
+							margin-right: 46px;
+							position: relative;
+							&:after{
+								display: block;
+								content: "";
+								width: 2px;
+								height: 100%;
+								background: black;
+								position: absolute;
+								right: -22px;
+								top: 0;
+							}
+						}
+					}
+				}
+			}
+		.answers{
+			li{
+				padding: 20px 0 20px 18px;
+				border-bottom: 1px solid $gray-light;
+				dl{
+					dt{
+						position: relative;
+						&:before{
+							display: block;
+							content: "";
+							height: 100%;
+							width: 2px;
+							background: lightblue;
+							position: absolute;
+							left: -18px;
+							top: 0;
+						}
+					}
+					.context{
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						line-height: 50px;
+						color: gray;
+					}
+					.popAndTime{
+						color: $gray-light;
+						.popularity{
+							span{
+								color: $brand-yellow;
+							}
+							.rubbish{
+								margin-left: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
