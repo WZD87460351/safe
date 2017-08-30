@@ -117,6 +117,18 @@
 						.citySelect{
 							display: inline-block;
 							margin-left: 30px;
+							.selectDistrict{
+								display: inline-block;
+								vertical-align: top;
+							}
+							input[type=submit]{
+								width: 60px;
+								height: 20px;
+								vertical-align: top;
+								border: none;
+								outline: none;
+								background: gray-light;
+							}
 						}
 					}
 					&.modifyAvatar{

@@ -44,15 +44,14 @@
 				<li class="location">
 					<span>所在城市:</span>
 					<div id="city" class="citySelect">
-  					<select class="prov">
-							<option value="江苏省" selected>江苏省</option>
-  					</select>
-  					<select class="city">
-							<option value="南京市" selected>南京市</option>
-  					</select>
-  					<select class="dist">
-							<option value="秦淮区">秦淮区</option>
-  					</select>
+  					<form action="">
+							<div data-toggle="distpicker" class="selectDistrict">
+								<select data-province="江苏省"></select>
+								<select data-city="南京市"></select>
+								<select data-district="秦淮区"></select>
+							</div>
+							<input type="submit">
+  					</form>
 					</div>
 				</li>
 				<li class="modifyAvatar">
